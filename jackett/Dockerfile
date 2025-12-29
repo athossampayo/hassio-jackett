@@ -24,10 +24,11 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-              libicu60 \
-              libssl1.0 \
+              libicu70 \
+              libssl3 \
               wget \
               curl \
+              jq \
               nginx \
               libnginx-mod-http-lua \
               luarocks \

@@ -44,3 +44,6 @@ jobs:
           build-args: |
             BUILD_ARCH=${{ matrix.architecture }}
             BUILD_FROM=ghcr.io/hassio-addons/ubuntu-base/${{ matrix.architecture }}:6.2.1
+            JACKETT_RELEASE=v0.24.612
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

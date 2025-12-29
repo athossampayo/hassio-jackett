@@ -23,15 +23,11 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apt-get update \
     \
-    && (apt-get install -y --no-install-recommends libicu70 2>/dev/null || \
-        apt-get install -y --no-install-recommends libicu72 2>/dev/null || \
-        apt-get install -y --no-install-recommends libicu) \
     && apt-get install -y --no-install-recommends \
-              libssl3 \
-              ca-certificates \
+              libicu60 \
+              libssl1.0 \
               wget \
               curl \
-              jq \
               nginx \
               libnginx-mod-http-lua \
               luarocks \

@@ -23,9 +23,12 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apt-get update \
     \
+    && (apt-get install -y --no-install-recommends libicu70 || \
+        apt-get install -y --no-install-recommends libicu72 || \
+        apt-get install -y --no-install-recommends libicu) \
     && apt-get install -y --no-install-recommends \
-              libicu70 \
               libssl3 \
+              ca-certificates \
               wget \
               curl \
               jq \

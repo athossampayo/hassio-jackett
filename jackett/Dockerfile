@@ -44,10 +44,10 @@ RUN \
     && if [ "${BUILD_ARCH}" = "armv7" ]; then ARCH="ARM32"; fi \
     && curl -o \
     /tmp/jackett.tar.gz -L \
-		"https://github.com/Jackett/Jackett/releases/download/${JACKETT_RELEASE}/Jackett.Binaries.Linux${ARCH}.tar.gz" \
+    		"https://github.com/Jackett/Jackett/releases/download/${JACKETT_RELEASE}/Jackett.Binaries.Linux${ARCH}.tar.gz" \
     && tar xf \
     /tmp/jackett.tar.gz -C \
-		/opt/Jackett --strip-components=1 \
+    		/opt/Jackett --strip-components=1 \
     && apt-get clean \
     && rm -rf /tmp/* \
               /var/lib/apt/lists/* \
